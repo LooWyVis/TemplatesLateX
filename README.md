@@ -1,6 +1,6 @@
 # TemplatesLateX
 
-Foobar is a Python library for dealing with word pluralization.
+Listes de templates LaTeX voué à l'enseignement
 
 ## Installation
 
