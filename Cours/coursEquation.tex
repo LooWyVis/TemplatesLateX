@@ -1,0 +1,113 @@
+\documentclass[11pt]{exam}
+
+\usepackage[a4paper,margin={.1\paperheight,.1\paperwidth},marginratio=1:1]{geometry}
+%\usepackage[latin1]{inputenc}  %Pour Windows
+\usepackage[utf8]{inputenc}   %Pour MAC 
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}  % Ajout pour les mathématiques
+
+\newcommand{\doublebar}[0]{
+    \noindent\rule{\textwidth}{3pt}
+    \rule[3mm]{\textwidth}{0.5pt}
+}
+
+\newcounter{compteurpartie}
+\newcounter{compteurexercice}
+
+\newcommand{\partie}[1]{
+    \stepcounter{compteurpartie}
+    \section*{Partie \arabic{compteurpartie} : \hspace{1pt} #1}
+    \setcounter{compteurexercice}{0} 
+}
+
+\newcommand{\exercice}[2]{
+    \stepcounter{compteurexercice}
+    \section*{\arabic{compteurpartie}.\arabic{compteurexercice} \hrulefill \hspace{1pt} #1}
+}
+
+\begin{document}
+
+% Header
+\noindent Lycée Madeleine Michelis \hfill Mathématiques
+
+\vspace{2em}
+\begin{center}
+    \textbf{Équations du Second Degré}
+
+    \vspace{1em}
+    Cours
+\end{center}
+    
+\doublebar
+
+
+% Content
+\partie{Méthode de Résolution d'une Équation du Second Degré}
+
+\exercice{Forme générale}
+
+Une équation du second degré se présente sous la forme générale suivante :
+\[
+ax^2 + bx + c = 0
+\]
+où \(a\), \(b\) et \(c\) sont des coefficients réels, et \(a \neq 0\).
+
+\exercice{Le discriminant}
+
+Pour résoudre une équation du second degré, on commence par calculer le discriminant \(\Delta\) donné par la formule :
+\[
+\Delta = b^2 - 4ac
+\]
+Selon la valeur de \(\Delta\), il existe trois cas possibles :
+
+\begin{itemize}
+    \item Si \(\Delta > 0\), l'équation a deux solutions réelles distinctes.
+    \item Si \(\Delta = 0\), l'équation a une solution réelle double.
+    \item Si \(\Delta < 0\), l'équation n'a pas de solution réelle, mais deux solutions complexes.
+\end{itemize}
+
+\exercice{Les solutions}
+
+Les solutions de l'équation dépendent du signe du discriminant \(\Delta\).
+
+\begin{enumerate}
+    \item \textbf{Cas 1 : \(\Delta > 0\)} \\
+    L'équation a deux solutions réelles distinctes données par :
+    \[
+    x_1 = \frac{-b - \sqrt{\Delta}}{2a}, \quad x_2 = \frac{-b + \sqrt{\Delta}}{2a}
+    \]
+    
+    \item \textbf{Cas 2 : \(\Delta = 0\)} \\
+    L'équation a une solution réelle double :
+    \[
+    x = \frac{-b}{2a}
+    \]
+    
+    \item \textbf{Cas 3 : \(\Delta < 0\)} \\
+    L'équation n'a pas de solution réelle. Les solutions sont complexes :
+    \[
+    x_1 = \frac{-b - i\sqrt{|\Delta|}}{2a}, \quad x_2 = \frac{-b + i\sqrt{|\Delta|}}{2a}
+    \]
+\end{enumerate}
+
+\exercice{Exemple}
+
+Considérons l'équation suivante :
+\[
+2x^2 - 4x - 6 = 0
+\]
+Nous avons ici \(a = 2\), \(b = -4\), et \(c = -6\). Calculons le discriminant :
+\[
+\Delta = (-4)^2 - 4 \times 2 \times (-6) = 16 + 48 = 64
+\]
+Comme \(\Delta > 0\), l'équation a deux solutions réelles distinctes :
+\[
+x_1 = \frac{-(-4) - \sqrt{64}}{2 \times 2} = \frac{4 - 8}{4} = -1
+\]
+\[
+x_2 = \frac{-(-4) + \sqrt{64}}{2 \times 2} = \frac{4 + 8}{4} = 3
+\]
+Ainsi, les solutions de l'équation sont \(x_1 = -1\) et \(x_2 = 3\).
+
+\end{document}

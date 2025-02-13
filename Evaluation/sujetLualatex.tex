@@ -1,0 +1,49 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX TS-program = lualatex
+\documentclass[12pt,%
+addpoints,%answers%
+]{exam}
+
+\usepackage{unicode-math}
+\usepackage[frenchb]{babel}
+\pagestyle{headandfoot}
+
+\firstpageheader{Nom : \\ Prénom :}
+  {}
+  {classe : \texttt{www.cuk.ch} \\ Date : \today}
+\firstpagefooter{}{Page~\thepage}{}
+\hsword{Cote:}
+\begin{document}
+\begin{center}
+  {\huge\bfseries\sffamily Contrôle pour rire}
+  \par\bigskip
+  \gradetable[h]
+\end{center}
+\begin{questions}
+  \question[1\half] Démontrer que \( (a+b)^2 = a^2 + 2ab + b^2 \).
+  \begin{solution}[5\bigskipamount]
+    \[
+      (a+b)^2 = (a+b)\times(a+b) = a^2 + ab + ba + b^2 = a^2 + 2ab + b^2.
+    \]
+  \end{solution}
+  \question[1\half] Quelle était la couleur du cheval blanc d'Henri~IV ?
+  \begin{solution}[3\bigskipamount]
+    Noir avant d'être recouvert de farine.
+  \end{solution}
+  
+  \question[2] La bataille de Marignan est une des plus célèbres de l'histoire de France.
+  
+  \begin{parts}
+  
+    \part Quand a-t-elle eu lieu ?
+  
+    \begin{solution}[3\bigskipamount]
+      En 1515.
+    \end{solution}
+    \part Comment s'appelait le roi de France vainqueur de cette bataille ?
+    \begin{solution}[3\bigskipamount]
+      François~1\ier.
+    \end{solution}
+  \end{parts}
+\end{questions}
+\end{document}

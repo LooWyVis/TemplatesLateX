@@ -1,0 +1,76 @@
+\documentclass[11pt]{exam}
+
+\usepackage[a4paper,margin={.1\paperheight,.1\paperwidth},marginratio=1:1]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amssymb} % Ajout du package pour les symboles mathématiques
+\pagestyle{headandfoot}
+
+% Commande pour dessiner une double ligne
+\newcommand{\doublebar}[0]{
+    \noindent\rule{\textwidth}{3pt} % Ligne épaisse en haut
+    \rule[3mm]{\textwidth}{0.5pt}    % Ligne fine en dessous
+}
+
+% Compteurs pour les parties et les exercices
+\newcounter{compteurpartie}
+\newcounter{compteurexercice}
+
+% Commande pour créer une nouvelle partie
+\newcommand{\partie}[1]{
+    \stepcounter{compteurpartie}
+    \section*{Partie \arabic{compteurpartie} : \hspace{1pt} #1}
+    \setcounter{compteurexercice}{0} % Réinitialiser le compteur d'exercices
+}
+
+% Commande pour créer un nouvel exercice
+\newcommand{\exercice}[2]{
+    \stepcounter{compteurexercice}
+    \section*{Exercice \arabic{compteurexercice} \tiny{/#2 points} \hrulefill \hspace{1pt} #1}
+}
+
+% Début du document
+\begin{document}
+
+\firstpageheader{Nom : \\ Prénom :}
+  {}
+  {classe : \texttt{Terminale} \\ Date : \today}
+\firstpagefooter{}{Page~\thepage}{}
+
+\vspace{2em}
+\begin{center}
+    \textbf{Équations du second degré}
+
+    \vspace{1em}
+    Évaluation
+\end{center}
+    
+\doublebar
+
+% Contenu
+\partie{Résolution d'équations du second degré}
+
+\exercice{}{5}
+Résoudre l'équation \(2x^2 - 4x - 6 = 0\) en utilisant la formule quadratique.
+
+\exercice{}{5}
+Trouver les racines de l'équation \(x^2 + 3x + 2 = 0\) par factorisation.
+
+\partie{Analyse de fonctions quadratiques}
+
+\exercice{}{10}
+Donner le sommet de la parabole de l'équation \(y = -x^2 + 4x - 3\).
+
+\exercice{}{5}
+Déterminer le signe de la fonction \(f(x) = x^2 - 5x + 6\) sur \(\mathbb{R}\).
+
+\partie{Applications des équations du second degré}
+
+\exercice{}{10}
+Un projectile est lancé verticalement vers le haut. Sa hauteur en fonction du temps est donnée par l'équation \(h(t) = -5t^2 + 20t + 10\). Déterminer le temps au bout duquel le projectile atteint sa hauteur maximale.
+
+\exercice{}{10}
+Un rectangle a une aire de 60 m². Si la longueur est 2 m plus grande que la largeur, établir et résoudre l'équation du second degré pour trouver les dimensions du rectangle.
+
+\end{document}

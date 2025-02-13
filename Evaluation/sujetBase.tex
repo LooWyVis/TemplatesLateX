@@ -1,0 +1,81 @@
+\documentclass[11pt]{exam}
+
+\usepackage[a4paper,margin={.1\paperheight,.1\paperwidth},marginratio=1:1]{geometry}
+%\usepackage[latin1]{inputenc}  %Pour Windows
+\usepackage[utf8]{inputenc}   %Pour MAC 
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{pifont}
+\usepackage{amssymb}
+
+\pagestyle{headandfoot}
+
+\newcommand{\doublebar}[0]{
+    \noindent\rule{\textwidth}{3pt}
+    \rule[3mm]{\textwidth}{0.5pt}
+}
+
+\newcounter{compteurpartie}
+\newcounter{compteurexercice}
+
+\newcommand{\partie}[1]{
+    \stepcounter{compteurpartie}
+    \section*{Partie \arabic{compteurpartie} : \hspace{1pt} #1}
+    \setcounter{compteurexercice}{0} 
+}
+
+\newcommand{\exercice}[2]{
+    \stepcounter{compteurexercice}
+    \section*{Exercice \arabic{compteurexercice} \tiny{/#2 points} \hrulefill \hspace{1pt} #1}
+}
+
+
+\begin{document}
+
+% Header
+\firstpageheader{Nom : \\ Prénom :}
+  {}
+  {classe : \texttt{Terminale} \\ Date : \today}
+\firstpagefooter{}{Page~\thepage}{}
+
+\vspace{2em}
+\begin{center}
+    \textbf{Cryptographie}
+
+    \vspace{1em}
+    Projet
+\end{center}
+    
+\doublebar
+
+\section*{Le barème}
+
+\begin{tabular}{|c|c|}
+    \hline
+    \textbf{Exercice} & \textbf{Temps recommandé} \\ \hline
+    1 & 20 minutes \\
+    \hline
+    2 & 10 minutes \\
+    \hline
+    1 & 30 minutes \\
+    \hline
+\end{tabular}
+
+% Content
+\partie{Nom de la partie}
+
+\exercice{Nom de l'exercice}{5}
+
+\begin{itemize}
+    \item[$\square$] Reponse 1
+    \item[$\square$] Reponse 1
+    \item[$\square$] Reponse 1
+\end{itemize}
+
+\exercice{Nom de l'exercice}{5}
+
+\partie{Nom de la partie}
+
+\exercice{}{10}
+
+\end{document}

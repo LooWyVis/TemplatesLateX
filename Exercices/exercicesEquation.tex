@@ -1,0 +1,78 @@
+\documentclass[11pt]{exam}
+
+\usepackage[a4paper,margin={.1\paperheight,.1\paperwidth},marginratio=1:1]{geometry}
+\usepackage[utf8]{inputenc}   %Pour MAC 
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}  % Ajout du package pour les mathématiques
+\usepackage{amsfonts} % Facultatif, mais utile pour les symboles supplémentaires
+\usepackage{siunitx}  % Pour les unités de mesure
+
+
+\newcommand{\doublebar}[0]{
+    \noindent\rule{\textwidth}{3pt}
+    \rule[3mm]{\textwidth}{0.5pt}
+}
+
+\newcounter{compteurpartie}
+\newcounter{compteurexercice}
+
+\newcommand{\partie}[1]{
+    \stepcounter{compteurpartie}
+    \section*{Partie \arabic{compteurpartie} : \hspace{1pt} #1}
+    \setcounter{compteurexercice}{0} 
+}
+
+\newcommand{\exercice}[2]{
+    \stepcounter{compteurexercice}
+    \section*{Exercice \arabic{compteurexercice} \hrulefill \hspace{1pt} #1}
+}
+
+
+\begin{document}
+
+% Header
+\noindent Lycée Madeleine Michelis \hfill Mathématiques
+
+\vspace{2em}
+\begin{center}
+    \textbf{Équations du Second Degré}
+
+    \vspace{1em}
+    Exercices
+\end{center}
+    
+\doublebar
+
+% Content
+\partie{Résolution d'équations du second degré}
+
+\exercice{Résolution d'une équation simple}
+
+Résoudre l'équation suivante :
+\[
+x^2 - 5x + 6 = 0
+\]
+
+
+\exercice{Discriminant}
+
+Pour l'équation \( 2x^2 - 4x - 3 = 0 \), calculer le discriminant et en déduire les solutions de l'équation.
+
+
+\partie{Applications des équations du second degré}
+
+\exercice{Problème appliqué}
+
+Un objet est projeté verticalement vers le haut avec une vitesse initiale de \( 20 \, \text{m/s} \). Sa hauteur \( h(t) \) en fonction du temps est donnée par l'équation \( h(t) = -5t^2 + 20t + 2 \). À quel moment l'objet atteint-il la hauteur maximale ?
+
+
+\exercice{Facteur commun}
+
+Résoudre l'équation suivante en factorisant :
+\[
+3x^2 + 12x + 12 = 0
+\]
+
+
+\end{document}
